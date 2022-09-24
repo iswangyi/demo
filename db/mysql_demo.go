@@ -10,8 +10,8 @@ import (
 
 func (d *DbConnect) Connect() error {
 	//db, err := sql.Open("mysql", "user:password@/dbname")
-	DNS := fmt.Sprintf("cmp:QGrePyjOZs8eYf8LR7RCZjYU1Qd^^q@tcp(%s/%s)", d.host, d.dbName)
-	log.Printf("DNS:%s", DNS)
+	DNS := fmt.Sprintf("cmp:QGrePyjOZs8eYf8LR7RCZjYU1Qd^^q@tcp(%s/mysql)", d.host)
+	log.Printf("DNS....%s", DNS)
 	db, err := sql.Open("mysql", DNS)
 	if err != nil {
 		panic(err.Error()) // Just for example purpose. You should use proper error handling instead of panic
