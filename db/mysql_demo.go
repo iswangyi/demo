@@ -24,6 +24,18 @@ func (d *DbConnect) Connect() error {
 	if err != nil {
 		panic(err.Error()) // proper error handling instead of panic in your app
 	}
+	r, err := db.Query("SHOW DATABASES;")
+	if err != nil {
+		log.Println(err)
+
+	}
+	var table string
+	for r.Next() {
+		r.Scan(&table)
+		fmt.Println(table)
+
+	}
+
 	return err
 }
 
