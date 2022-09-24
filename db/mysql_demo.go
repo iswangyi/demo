@@ -10,7 +10,7 @@ import (
 
 func (d *DbConnect) Connect() error {
 	//db, err := sql.Open("mysql", "user:password@/dbname")
-	DNS := fmt.Sprintf("cmp:QGrePyjOZs8eYf8LR7RCZjYU1Qd^^q@tcp(%s/mysql)", d.host)
+	DNS := "cmp:QGrePyjOZs8eYf8LR7RCZjYU1Qd^^q@tcp(maxscale2-rwsplit:3306/mysql)"
 	log.Printf("DNS....%s", DNS)
 	db, err := sql.Open("mysql", DNS)
 	if err != nil {
