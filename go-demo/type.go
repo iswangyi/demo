@@ -1,15 +1,12 @@
 package main
 
 import (
-	"container/list"
 	"fmt"
 )
 
 func main() {
 	fmt.Println(len("Go语言")) // 8
 	fmt.Println(len([]rune("Go语言")))
-	l := list.List{}
-	list.Element{}
 	fmt.Println(rune('x'))
 	fmt.Println(string(20320))
 	temp := []rune{20320, 22909, 32, 19990, 30028}
