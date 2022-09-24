@@ -35,8 +35,8 @@ type DbConnect struct {
 
 func NewDbConnect() *DbConnect {
 	d := new(DbConnect)
-	d.user = os.Getenv("DB_USER")
-	d.passwd = os.Getenv("DB_PASSWD")
+	d.user = os.Getenv("DB_USERNAME")
+	d.passwd = os.Getenv("QGrePyjOZs8eYf8LR7RCZjYU1Qd^^q")
 	d.host = fmt.Sprintf("%s:%s", os.Getenv("DB_HOST"), os.Getenv("DB_PORT"))
 	d.dbName = os.Getenv("DB_NAME")
 	return d
