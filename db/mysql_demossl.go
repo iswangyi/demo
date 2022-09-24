@@ -66,7 +66,7 @@ func main() {
 	}
 
 	// connection string (dataSourceName) is slightly different
-	dsn := "cmp:QGrePyjOZs8eYf8LR7RCZjYU1Qd^^q@tcp(maxscale2-rwsplit:3306)/rightcloud?tls=skip-verify&autocommit=true"
+	dsn := "cmp:QGrePyjOZs8eYf8LR7RCZjYU1Qd^^q@tcp(maxscale2-rwsplit:3306)/rightcloud?tls=custom&autocommit=true"
 	db1, err := sql.Open("mysql", dsn)
 
 	if err != nil {
