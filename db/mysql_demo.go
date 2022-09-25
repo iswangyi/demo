@@ -11,7 +11,7 @@ import (
 func (d *DbConnect) Connect() error {
 	//db, err := sql.Open("mysql", "user:password@/dbname")
 	//DNS := "cmp:QGrePyjOZs8eYf8LR7RCZjYU1Qd^^q@tcp(maxscale2-rwsplit:3306)"
-	DNS := "root:QGrePyjOZs8eYf8LR7RCZjYU1Qd^^q@tcp(maxscale2-rwsplit:3306)/rightcloud"
+	DNS := "root:QGrePyjOZs8eYf8LR7RCZjYU1Qd^^q@tcp(maxscale2-rwsplit:3306)/rightcloud?tls=true&InsecureSkipVerify=true"
 	log.Printf("DNS....: %s", DNS)
 	db, err := sql.Open("mysql", DNS)
 	if err != nil {
